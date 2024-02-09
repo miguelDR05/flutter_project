@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart';
 
 class GraphWidget extends StatefulWidget {
+  const GraphWidget({super.key});
+
   @override
   _GraphWidgetState createState() => _GraphWidgetState();
 }
@@ -41,7 +43,7 @@ class _GraphWidgetState extends State<GraphWidget> {
     List<Series<double, int>> series = [ // Cambia el tipo de datos a int
       Series<double, int>(
         id: 'Gasto',
-        colorFn: (_, __) => MaterialPalette.blue.shadeDefault,
+        colorFn: (_, __) => MaterialPalette.pink.shadeDefault,
         domainFn: (value, index) => index ?? 0, // Si es nulo, utiliza 0
         measureFn: (value, _) => value ?? 0.0, // Si es nulo, utiliza 0.0
         data: data,
